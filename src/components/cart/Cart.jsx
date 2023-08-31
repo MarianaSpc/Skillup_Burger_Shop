@@ -1,8 +1,12 @@
+//Task 3.1
+
+
 import React from "react";
 import { Link } from "react-router-dom";
 import burger1 from "../../assets/burger1.png";
 import burger2 from "../../assets/burger2.png";
 // import burger3 here
+import burger3 from "../../assets/burger3.png";
 
 const CartItem = ({ value, title, img, increment, decrement }) => (
   <div className="cartItem">
@@ -34,6 +38,7 @@ const Cart = () => {
           increment={() => increment(1)}
 
         // Add the function for decrementing the order by 1 
+        decrement={() => decrement(1)}
        
         />
         <CartItem
@@ -42,10 +47,19 @@ const Cart = () => {
           value={0}
           increment={() => increment(2)}
         // Add the function for decrementing the order by 2
+        decrement={() => decrement(2)}
        
         />
 
+
         {/* Fill up the code for Cheese Burger similarly */}
+        <CartItem
+          title={"Cheese Burger with French Fries"} //title: ”Cheese Burger with French Fries
+          img={burger3} // import the image (“burger3”) from the assets folder to use this as the variable
+          value={0} // initial value as 0
+          increment={() => increment(3)} //Add increment  counters
+          decrement={() => decrement(3)} //Add decrement counters
+        />
        
 
         <article>
